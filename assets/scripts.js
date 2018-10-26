@@ -1,14 +1,5 @@
 $(document).ready(function () {
   // ==========================================================
-
-  // Create a basic html button then create an onClick event that triggers an on click event.
-  // 
-  // function triviaGame(question, answers, correctAnswer) {
-  // this.question = question;
-  // this.answers = answers;
-  // this.correctAnswer = correctAnswer;
-  // } // end function triviagame
-  // 
   // ==========================================================
 
   // global variables 
@@ -24,7 +15,6 @@ $(document).ready(function () {
       var value = topic[i];
       $(".button-div").append('<button class="button" id=' + value + '>' + value + '</button>');
     }
-    // return value;
   }
   topicArray();
 
@@ -52,9 +42,7 @@ $(document).ready(function () {
         // ========== button event for search
         for (var i = 0; i < results.length; i++) {
           var giphyDiv = $("<div class='single'></div>");
-
           var rating = results[i].rating;
-
           var p = $("<p>").text("Rating: " + rating);
 
           // img src="https://media1.giphy.com/media/3o85xkQpyMlnBkpB9C/200_s.gif" data-still="https://media1.giphy.com/media/3o85xkQpyMlnBkpB9C/200_s.gif" data-animate="https://media1.giphy.com/media/3o85xkQpyMlnBkpB9C/200.gif" data-state="still" class="gif"
@@ -65,27 +53,14 @@ $(document).ready(function () {
           giphyImage.attr("data-animate", results[i].images.fixed_height.url);
           giphyImage.attr("data-state='still'");
           giphyImage.addClass("gif-image");
-
+          // add elements to giphydiv
           giphyDiv.prepend(p);
           giphyDiv.prepend(giphyImage);
-
           $(".giphy-div").prepend(giphyDiv);
         }
 
         
-
-        // ========== button event for search
-  $("#search-button").on("click", function (event) {
-    event.preventDefault();
-    var searchTerm = $("#search-term").val().trim();
-    topic.push(searchTerm);
-
-    topicArray();
-
-  });
-
-
-  // ========== gif image stop / start 
+        // ========== gif image stop / start 
         $(".gif-image").on("click", function () {
           console.log("gif");
       
@@ -104,9 +79,16 @@ $(document).ready(function () {
           }
         });
 
+      
+
         
-      });
-  });
+      }); // end function responce
+  }); // end ajax
+  
+
+
+
+  
 
 
 
