@@ -269,18 +269,12 @@ a:active {
   }
 
 
-  header {
-    border-bottom: 1px solid #dddddd;
-    color: #333;
-    background:white; 
-    margin: 0 auto;
+ 
 
-  }
-
-#logo {
+/* #logo {
   padding: 20px 25px 20px 25px;
   height: 100%;
-}
+} */
 
 nav {
   background: white;
@@ -325,12 +319,7 @@ section {
       /* background-color: red; */
   }
 
-  header {
-    border-bottom: 1px solid #dddddd;
-    color: #333;
-    background:white; 
-    width: 100%;
-  }
+  
 
   nav {
     background: white;
@@ -343,21 +332,21 @@ section {
    
   
   }
-  #logo {
+
+  /* #logo {
     background: black;
     color: black;
     /* display: inline; */
-    padding: 20px 25px 20px 25px;
+    /* padding: 20px 25px 20px 25px;
     margin-left: 0px;
     float: left;
     height: 100%;
-  
-  }
+  } */ 
 
 
   section {
     background: white;
-    border: 1px solid #dddddd;
+    /* border: 1px solid #dddddd; */
     color: #333;
     font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
   line-height: 200%;
@@ -396,7 +385,7 @@ section {
 
   section {
     background: white;
-    border: 1px solid #dddddd;
+    /* border: 1px solid #dddddd; */
     color: #333;
     font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
   line-height: 200%;
@@ -414,13 +403,16 @@ section {
       
   
       #logo {
-        background: black;
+        background: pink;
         color: black;
         display: inline;
-        padding: 20px 0px 20px 0px;
+        padding: 0px 0px 0px 0px;
         text-align: center;
         width: 100%;
         overflow: auto;
+        margin-left: 0px;
+    float: left;
+    height: 0px;
 
       
       }
@@ -471,19 +463,6 @@ header {
   background: white;
 }
 
-
-/* header info */
-#logo {
-  background: black;
-  color: black;
-
-  float: left;
-  height: 46px;
-  display: block;
-
-
-
-}
 
 nav {
   
