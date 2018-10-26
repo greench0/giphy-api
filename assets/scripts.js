@@ -18,20 +18,27 @@ $(document).ready(function () {
   }
   topicArray();
 
+  // ========== button event for search feature
+  $("#search-button").on("click", function (event) {
+    event.preventDefault();
+    var searchTerm = $("#search-term").val().trim();
+    topic.push(searchTerm);
 
+    topicArray();
+
+  });
+
+
+
+  // ========== button event for loading giphy images when topic buttons are selected
   $(".button").on("click", function (event) {
     event.preventDefault();
 
     $(".giphy-div").empty();
     var giphyBtn = $(this).attr("id");
     console.log(giphyBtn);
-    https://api.giphy.com/v1/gifs/random?api_key=dc6zaTOxFJmzC&tag=cats
-    // "https://api.giphy.com/v1/gifs/search?q=" + giphyBtn + "&api_key=dc6zaTOxFJmzC&limit=10"
     var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + giphyBtn + "&api_key=dc6zaTOxFJmzC&limit=10";
 
-    
-    
-    
     $.ajax({
       url: queryURL,
       method: "GET"
@@ -44,8 +51,6 @@ $(document).ready(function () {
           var giphyDiv = $("<div class='single'></div>");
           var rating = results[i].rating;
           var p = $("<p>").text("Rating: " + rating);
-
-          // img src="https://media1.giphy.com/media/3o85xkQpyMlnBkpB9C/200_s.gif" data-still="https://media1.giphy.com/media/3o85xkQpyMlnBkpB9C/200_s.gif" data-animate="https://media1.giphy.com/media/3o85xkQpyMlnBkpB9C/200.gif" data-state="still" class="gif"
 
           var giphyImage = $("<img>");
           giphyImage.attr("src", results[i].images.fixed_height_still.url);
@@ -60,7 +65,7 @@ $(document).ready(function () {
         }
 
         
-        // ========== gif image stop / start 
+        // ========== gif image stop / start function
         $(".gif-image").on("click", function () {
           console.log("gif");
       
